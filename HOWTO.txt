@@ -1,0 +1,44 @@
+I Am Like You
+=============
+
+WHAT'S HERE
+  index.html   the page, with the article text embedded (works on any host)
+  article.md   the article source
+  serve.py     a tiny local server for editing (not needed on the public site)
+
+
+HOSTING PUBLICLY
+  Upload index.html and article.md to any static host: Netlify, Vercel,
+  GitHub Pages, S3, a plain web server. Open index.html.
+
+  The Edit button does not appear on a public site, and nothing there can
+  change the copy. Only re-uploading files changes it.
+
+
+EDITING THE COPY LOCALLY
+  1. In this folder, run:
+
+       python3 serve.py
+
+  2. Open http://localhost:8765/ in a browser.
+  3. Click Edit (top right), or press E. Change the text, then
+     "Save & reload". This writes article.md in this folder.
+  4. To publish the change, re-upload index.html and article.md.
+
+  Note: the page loads article.md from the server when it can and otherwise
+  uses the copy embedded in index.html. On most static hosts article.md is
+  served, so uploading the edited article.md is enough. If your host does not
+  serve .md files, paste the new text into the embedded copy near the top of
+  index.html (the line beginning window.__ARTICLE_MD = ).
+
+
+MARKDOWN CONVENTIONS
+  The comment at the top of article.md explains the markers:
+  *italics* for dramatic beats, {glitch} {slow} {fade} {tag} {predict}
+  paragraph flags, {stop} where the typing ends, and the partner, credit,
+  byline, residue (1-100) and speed (1-100) settings at the top.
+
+
+URL FLAGS
+  ?from=conscious   jump to the final section
+  ?fast             skim the whole piece quickly
